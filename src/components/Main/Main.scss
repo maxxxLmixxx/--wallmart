@@ -1,0 +1,18 @@
+@import "../../utilities/config";
+
+$grid-gap: 10px;
+$min: $min-block-width; //// 200px
+
+.main-container {
+  display: grid;
+
+  padding: $grid-gap;
+  grid-gap: $grid-gap;
+
+  grid-template-columns:
+    minmax(3/2 * $min, 2fr)
+    minmax($min, 1fr)
+    minmax($min, 1fr);
+
+  grid-template-rows: auto;
+}

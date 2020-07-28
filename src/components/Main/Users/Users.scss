@@ -1,0 +1,14 @@
+@import "../../../utilities/config";
+
+.users-container {
+  // width: 100%;
+  height: auto;
+  background: #18181b;
+}
+
+.users-block {
+  max-height: 90vh;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-block-width, 1fr));
+}
