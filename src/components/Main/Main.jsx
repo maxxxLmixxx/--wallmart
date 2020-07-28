@@ -1,15 +1,15 @@
 import React from "react";
 import "./Main.scss";
 
-import Users from "./Users/Users";
+import Users from "./Users/UsersRedux";
+import ActiveUsers from "./ActiveUsers/ActiveUsersRedux";
 import Actions from "./Actions/Actions";
-import ActiveUsers from "./ActiveUsers/ActiveUsers";
 
 export default function Main() {
   return (
     <main className="main-container">
       <Users />
-      <ActiveUsers/>
+      <ActiveUsers />
       <Actions />
     </main>
   );
