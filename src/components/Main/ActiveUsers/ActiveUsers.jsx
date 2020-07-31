@@ -7,10 +7,10 @@ import "./ActiveUsers.scss";
 import User from '../Users/User/User'
 
 export default function ActiveUsers(props) {
-  const { users, setUserActive } = props;
+  const { users } = props;
   const [{ isOver }, drop] = useDrop({
     accept: ItemTypes.CARD,
-    drop: (item, monitor) => setUserActive(item.id, true),
+    drop: (item, monitor) => console.log('+'),
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -21,8 +21,7 @@ export default function ActiveUsers(props) {
       ref={drop}
       style={{ background: isOver ? "blue" : "red" }}
     >
-      {users
-        .filter(({ active }) => active === true)
+      {Object.values(users)
         .map(({ name, id, icon }) => (
           <User name={name} key={id} id={id} icon={icon} />
         ))}

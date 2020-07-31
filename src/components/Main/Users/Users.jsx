@@ -11,8 +11,7 @@ export default function Users(props) {
     <div class="users-container">
       <SearchUsers placeholder="Find user..." />
       <div class="users-block">
-        {users
-          .filter(({ active }) => active === false)
+        {Object.values(users)
           .map(({ name, id, icon }) => (
             <User name={name} key={id} id={id} icon={icon} />
           ))}
