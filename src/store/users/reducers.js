@@ -1,4 +1,5 @@
 // import { SET_USER_ACTIVE } from "./actions";
+import { SET_FILTER_VALUE } from "./actions";
 
 const defaultState = {
   allUsers: {
@@ -36,6 +37,7 @@ const defaultState = {
     "42": { name: "Mike32", id: "42", icon: "" },
     "43": { name: "Mike33", id: "43", icon: "" },
   },
+  filterValue: "",
   activeUsersIds: [],
   inactiveUsersIds: [
     "11",
@@ -76,6 +78,9 @@ const defaultState = {
 
 export const usersReducer = (state = defaultState, action) => {
   switch (action.type) {
+    case SET_FILTER_VALUE: {
+      return { ...state, filterValue: action.payload };
+    }
     // case SET_USER_ACTIVE:
     //   const { userId, value } = action.payload;
     //   return state.map((el) =>

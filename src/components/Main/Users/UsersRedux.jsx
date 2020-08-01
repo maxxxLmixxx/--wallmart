@@ -5,14 +5,15 @@ import { connect } from "react-redux";
 import Users from "./Users";
 
 function UsersRedux(props) {
-  const { users } = props;
-  return <Users users={users} />;
+  const { users, filterValue } = props;
+  return <Users users={users} filterValue={filterValue} />;
 }
 
 const mapStateToProps = (state) => {
-  const { allUsers, inactiveUsersIds } = state.users;
+  const { allUsers, inactiveUsersIds, filterValue } = state.users;
   return {
-    users: inactiveUsersIds.map(id => allUsers[id]),
+    users: inactiveUsersIds.map((id) => allUsers[id]),
+    filterValue,
   };
 };
 
