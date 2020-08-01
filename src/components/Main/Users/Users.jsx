@@ -17,7 +17,7 @@ export default function Users(props) {
     }),
   })
   return (
-    <div className="users-container" ref={drop} style={{ background: isOver ? 'blue' : 'red' }}>
+    <div className={`users-container ${isOver ? 'droppable--inactive' : ''}`} ref={drop}>
       <SearchUsers placeholder="Find user..." />
       <div className="users-block">
         {Object.values(users)

@@ -108,11 +108,6 @@ export const usersReducer = (state = defaultState, action) => {
       const { value } = action.payload
       return { ...state, filterValue: value }
     }
-    // case SET_USER_ACTIVE:
-    //   const { userId, value } = action.payload;
-    //   return state.map((el) =>
-    //     el.id === userId ? { ...el, active: value } : el
-    //   );
     default:
       return { ...state }
   }

@@ -1,4 +1,4 @@
-@import "../../../utilities/config";
+@import '../../../utilities/config';
 
 .users-container {
   // width: 100%;
@@ -11,4 +11,9 @@
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min-block-width, 1fr));
+}
+
+$lines-color: red;
+.droppable--inactive {
+  background: repeating-linear-gradient(45deg, $lines-color, $lines-color 17px, #18181b 17px, #18181b 50px);
 }

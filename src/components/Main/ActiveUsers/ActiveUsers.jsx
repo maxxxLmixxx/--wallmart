@@ -16,7 +16,7 @@ export default function ActiveUsers(props) {
     }),
   })
   return (
-    <div className="activeUsers-container" ref={drop} style={{ background: isOver ? 'blue' : 'red' }}>
+    <div className={`activeUsers-container  ${isOver ? 'droppable--active' : ''}`} ref={drop}>
       {Object.values(users).map(({ name, id, icon }) => (
         <User name={name} key={id} id={id} icon={icon} />
       ))}
