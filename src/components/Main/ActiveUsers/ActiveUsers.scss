@@ -6,6 +6,12 @@
 }
 
 .droppable--active {
-//   background: repeating-linear-gradient(45deg, #606dbc, #606dbc 15px, #465298 15px, #465298 50px);
-  background: repeating-linear-gradient(45deg, green, green 17px, #444953 17px, #444953 50px);
+  //   background: repeating-linear-gradient(45deg, #606dbc, #606dbc 15px, #465298 15px, #465298 50px);
+  background: repeating-linear-gradient(
+    45deg,
+    green,
+    green 17px,
+    #444953 17px,
+    #444953 50px
+  );
 }

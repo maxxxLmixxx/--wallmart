@@ -6,14 +6,15 @@ import { setUserActive } from 'store/users/actions'
 import ActiveUsers from './ActiveUsers'
 
 function ActiveUsersContainer(props) {
-  const { users, setUserActive } = props
-  return <ActiveUsers users={users} setUserActive={setUserActive} />
+  const { users, inactiveUsersIds, setUserActive } = props
+  return <ActiveUsers users={users} inactiveUsersIds={inactiveUsersIds} setUserActive={setUserActive} />
 }
 
 const mapStateToProps = (state) => {
-  const { allUsers, activeUsersIds } = state.users
+  const { allUsers, inactiveUsersIds, activeUsersIds } = state.users
   return {
     users: activeUsersIds.map((id) => allUsers[id]),
+    inactiveUsersIds
   }
 }
 
