@@ -18,7 +18,7 @@ export default function User(props) {
   });
 
   return (
-    <div class="user" ref={drag} style={{ opacity: isDragging ? 0.55 : 1 }}>
+    <div className="user" ref={drag} style={{ opacity: isDragging ? 0.55 : 1 }}>
       <img src={icon} alt="user-icon" className="user-icon" />
       <div className="user-description">
         <span>{name}</span>

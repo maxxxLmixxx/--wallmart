@@ -17,9 +17,9 @@ export default function Users(props) {
     }),
   })
   return (
-    <div class="users-container" ref={drop} style={{ background: isOver ? 'blue' : 'red' }}>
+    <div className="users-container" ref={drop} style={{ background: isOver ? 'blue' : 'red' }}>
       <SearchUsers placeholder="Find user..." />
-      <div class="users-block">
+      <div className="users-block">
         {Object.values(users)
           .filter(({ name }) => name.startsWith(filterValue))
           .map(({ name, id, icon }) => (
