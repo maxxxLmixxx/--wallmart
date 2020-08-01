@@ -1,14 +1,23 @@
-import React from "react";
-import "./Users.scss";
+import React from 'react'
 
-import SearchUsers from "./SearchUsers/SearchUsersRedux";
-import User from "./User/User";
+import { useDrop } from 'react-dnd'
+import { ItemTypes } from 'utilities/items'
+
+import './Users.scss'
+import SearchUsers from './SearchUsers/SearchUsersRedux'
+import User from './User/User'
 
 export default function Users(props) {
-  const { users, filterValue } = props;
-
+  const { users, filterValue, setUserInactive } = props
+  const [{ isOver }, drop] = useDrop({
+    accept: ItemTypes.CARD,
+    drop: (item, monitor) => setUserInactive(item.id),
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+    }),
+  })
   return (
-    <div class="users-container">
+    <div class="users-container" ref={drop} style={{ background: isOver ? 'blue' : 'red' }}>
       <SearchUsers placeholder="Find user..." />
       <div class="users-block">
         {Object.values(users)
@@ -18,5 +27,5 @@ export default function Users(props) {
           ))}
       </div>
     </div>
-  );
+  )
 }

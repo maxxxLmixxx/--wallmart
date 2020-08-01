@@ -7,10 +7,10 @@ import "./ActiveUsers.scss";
 import User from '../Users/User/User'
 
 export default function ActiveUsers(props) {
-  const { users } = props;
+  const { users, setUserActive } = props;
   const [{ isOver }, drop] = useDrop({
     accept: ItemTypes.CARD,
-    drop: (item, monitor) => console.log('+'),
+    drop: (item, monitor) => setUserActive(item.id),
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),

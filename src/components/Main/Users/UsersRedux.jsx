@@ -1,22 +1,23 @@
-import React from "react";
+import React from 'react'
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux'
+import { setUserInactive } from 'store/users/actions'
 
-import Users from "./Users";
+import Users from './Users'
 
 function UsersRedux(props) {
-  const { users, filterValue } = props;
-  return <Users users={users} filterValue={filterValue} />;
+  const { users, filterValue, setUserInactive } = props
+  return <Users users={users} filterValue={filterValue} setUserInactive={setUserInactive} />
 }
 
 const mapStateToProps = (state) => {
-  const { allUsers, inactiveUsersIds, filterValue } = state.users;
+  const { allUsers, inactiveUsersIds, filterValue } = state.users
   return {
     users: inactiveUsersIds.map((id) => allUsers[id]),
     filterValue,
-  };
-};
+  }
+}
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = { setUserInactive }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersRedux);
+export default connect(mapStateToProps, mapDispatchToProps)(UsersRedux)

@@ -1,24 +1,22 @@
-import React from "react";
+import React from 'react'
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux'
+import { setUserActive } from 'store/users/actions'
 
-import ActiveUsers from "./ActiveUsers";
+import ActiveUsers from './ActiveUsers'
 
 function ActiveUsersContainer(props) {
-  const { users } = props;
-  return <ActiveUsers users={users} />;
+  const { users, setUserActive } = props
+  return <ActiveUsers users={users} setUserActive={setUserActive} />
 }
 
 const mapStateToProps = (state) => {
-  const { allUsers, activeUsersIds } = state.users;
+  const { allUsers, activeUsersIds } = state.users
   return {
-    users: activeUsersIds.map(id => allUsers[id]),
-  };
-};
+    users: activeUsersIds.map((id) => allUsers[id]),
+  }
+}
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {setUserActive}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ActiveUsersContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ActiveUsersContainer)
