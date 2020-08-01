@@ -80,21 +80,27 @@ export const usersReducer = (state = defaultState, action) => {
   switch (action.type) {
     case SET_USER_ACTIVE: {
       const { inactiveUsersIds, activeUsersIds } = state
+
+      console.log(state.activeUsersIds)
+
       const { userId } = action.payload
+      if (activeUsersIds.includes(userId)) return { ...state }
 
       const index = inactiveUsersIds.indexOf(userId)
       const user = inactiveUsersIds.splice(index, 1)
-      activeUsersIds.push(user)
+
+      activeUsersIds.push(...user)
 
       return { ...state, inactiveUsersIds, activeUsersIds }
     }
     case SET_USER_INACTIVE: {
       const { inactiveUsersIds, activeUsersIds } = state
       const { userId } = action.payload
+      if (inactiveUsersIds.includes(userId)) return { ...state }
 
       const index = activeUsersIds.indexOf(userId)
       const user = activeUsersIds.splice(index, 1)
-      inactiveUsersIds.push(user)
+      inactiveUsersIds.push(...user)
 
       return { ...state, inactiveUsersIds, activeUsersIds }
     }
