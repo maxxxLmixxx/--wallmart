@@ -7,7 +7,7 @@ export default function Users(props) {
     <>
       <label>
         <input
-          type="text"
+          type="search"
           className="search-users-input"
           onChange={({ target: { value } }) => setFilterValue(value)}
           value={filterValue}
