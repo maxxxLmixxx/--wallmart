@@ -1,19 +1,22 @@
 @import '../../../utilities/config';
 
+$container-color: #18181b;
+$lines-color: red;
+
+
 .users-container {
   // width: 100%;
   height: auto;
-  background: #18181b;
+  background: $container-color;
 }
 
 .users-block {
-  max-height: 90vh;
+  height: 90vh;
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min-block-width, 1fr));
 }
 
-$lines-color: red;
 .droppable--inactive {
   background: repeating-linear-gradient(45deg, $lines-color, $lines-color 17px, #18181b 17px, #18181b 50px);
 }

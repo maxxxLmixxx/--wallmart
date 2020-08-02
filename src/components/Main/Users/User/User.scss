@@ -25,7 +25,7 @@ $text-color: white;
 
 .user img {
   min-width: $image-size;
-  min-height: $image-size;
+  height: $image-size;
 
   display: inline-block;
   overflow: hidden;
