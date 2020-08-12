@@ -1,14 +1,20 @@
-// @import '../../../utilities/config';
+@import '../../../utilities/config';
+
+$container-color: #444953;
+$active-container-color: #444953af;
 
 .activeUsers-container {
   max-height: 90vh;
   overflow-y: scroll;
-  background: #444953;
+  background: $container-color;
+
+  // @include --moz-color-scrollbar(#717174, $container-color);
+  // @include --web-color-scrollbar(#717174, $container-color);
 }
 
 .droppable--active {
-  background: #444953af;
-  
+  background: $active-container-color;
+
   // @include --scrollbar;
 
   // $lines-color: rgb(0, 120, 0);

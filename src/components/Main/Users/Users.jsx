@@ -22,7 +22,7 @@ export default function Users(props) {
     <div
       className={`users-container ${isOver && activeUsersIds.includes(item?.id) ? 'droppable--inactive' : ''}`}
       ref={drop}
-    > 
+    >
       <div className="users--header">
         <SearchUsers placeholder="Find user..." />
         <RoomSwitcher />
