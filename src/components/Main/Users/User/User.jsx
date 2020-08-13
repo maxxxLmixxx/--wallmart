@@ -19,7 +19,8 @@ export default function User(props) {
 
   return (
     <div className="user" ref={drag} style={{ opacity: isDragging ? 0.55 : 1 }}>
-      <img src={icon} alt="user-icon" className="user-icon" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTR4xDiny0ZGQDUH9TcdMT_TAbvgiBePIa59w&usqp=CAU" alt="user-icon" className="user-icon" />
+      {/* <img src={icon} alt="user-icon" className="user-icon" /> */}
       <div className="user-description">
         <span>{name}</span>
         <span>{id}</span>

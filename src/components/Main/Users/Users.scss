@@ -6,6 +6,7 @@ $container-color--transparent: #18181bc5;
 
 .users-container {
   height: 90vh;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -22,7 +23,9 @@ $container-color--transparent: #18181bc5;
   display: grid;
   overflow-y: scroll;
 
-  align-items: flex-start;
+  height: 100%;
+  align-content: flex-start;
+
   grid-template-columns: repeat(auto-fit, minmax($min-block-width, 1fr));
 
   @include --moz-color-scrollbar(#717174, $container-color--transparent);

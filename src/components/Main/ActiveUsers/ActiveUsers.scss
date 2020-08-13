@@ -2,22 +2,21 @@
 
 $container-color: #444953;
 $active-container-color: #444953af;
+$container-color--transparent: #44495360;
 
 .activeUsers-container {
   max-height: 90vh;
   overflow-y: scroll;
   background: $container-color;
 
-  // @include --moz-color-scrollbar(#717174, $container-color);
-  // @include --web-color-scrollbar(#717174, $container-color);
+  @include --moz-color-scrollbar(#717174, $container-color);
+  @include --web-color-scrollbar(#717174, $container-color);
 }
 
 .droppable--active {
   background: $active-container-color;
 
-  // @include --scrollbar;
-
   // $lines-color: rgb(0, 120, 0);
-  //background: repeating-linear-gradient(45deg, #606dbc, #606dbc 15px, #465298 15px, #465298 50px);
+  // background: repeating-linear-gradient(45deg, #606dbc, #606dbc 15px, #465298 15px, #465298 50px);
   // background: repeating-linear-gradient(45deg, $lines-color, $lines-color 17px, #444953 17px, #444953 50px);
 }

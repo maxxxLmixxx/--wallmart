@@ -1,10 +1,11 @@
 @import "../../utilities/config";
 
-$grid-gap: 10px;
-$min: $min-block-width; //// 200px
+$grid-gap: .5vw;
+$min: $min-block-width;
 
 .main-container {
   display: grid;
+  overflow: hidden;
 
   padding: $grid-gap;
   grid-gap: $grid-gap;
