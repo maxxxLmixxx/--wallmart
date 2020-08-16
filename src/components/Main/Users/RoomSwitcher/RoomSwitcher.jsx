@@ -9,6 +9,7 @@ export default function RoomSwitcher() {
       <div className="room-switch"></div>
       <div className="room-switch"></div>
       <div className="room-switch"></div>
+      <div className="room-switch"></div>
     </div>
   )
 }

@@ -1,13 +1,23 @@
 .room-switches-container {
+  width: auto;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
+  
+  row-gap: .15vh;
+  column-gap: .15vw;
+
   margin: 1% 10px 0 0;
 }
 
 .room-switch {
   width: 30px;
   height: 25px;
-  margin-left: 2%;
   border-radius: 5px;
   background-color: #3f3f3f;
+
+  &:hover {
+    background-color: #3f3f3fa5;  
+    cursor: pointer;
+  }
 }
