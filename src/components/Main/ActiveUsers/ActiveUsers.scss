@@ -1,11 +1,11 @@
-@import '../../../utilities/config';
+@import "../../../utilities/config";
 
 $container-color: #444953;
 $active-container-color: #444953af;
 $container-color--transparent: #44495360;
 
 .activeUsers-container {
-  max-height: 90vh;
+  max-height: $section-height;
   overflow-y: scroll;
   background: $container-color;
 

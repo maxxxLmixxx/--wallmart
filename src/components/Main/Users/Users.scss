@@ -5,7 +5,7 @@ $container-active-color: $container-color;
 $container-color--transparent: #18181bc5;
 
 .users-container {
-  height: 90vh;
+  height: $section-height;
   overflow: hidden;
 
   display: flex;

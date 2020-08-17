@@ -1,4 +1,8 @@
+@import "../../../utilities/config";
+
 .actions-container {
-    height: 50vh;
-    background: #444953;
+  height: $section-height;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  gap: 1vh;
 }
