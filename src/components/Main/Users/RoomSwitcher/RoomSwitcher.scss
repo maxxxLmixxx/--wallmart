@@ -3,15 +3,16 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  
-  row-gap: .15vh;
-  column-gap: .15vw;
+  justify-content: flex-end;
+
+  row-gap: 1px;
+  column-gap: 1px;
 
   margin: 1% 10px 0 0;
 }
 
 .room-switch {
-  width: 30px;
+  width: 27px;
   height: 25px;
   border-radius: 5px;
   background-color: #3f3f3f;
