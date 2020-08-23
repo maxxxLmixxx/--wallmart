@@ -8,7 +8,7 @@ $min: $min-block-width;
   overflow: hidden;
 
   padding: $grid-gap;
-  grid-gap: $grid-gap;
+  gap: $grid-gap;
 
   grid-template-columns:
     minmax(3/2 * $min, 2fr)
