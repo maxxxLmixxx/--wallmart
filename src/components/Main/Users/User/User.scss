@@ -18,9 +18,14 @@ $text-color: white;
 
   overflow: hidden;
 
+  box-sizing: border-box;
   background: $main-color;
-
+  
   cursor: grab;
+}
+
+.active-user {
+  border: 1px solid white;
 }
 
 .user img {
@@ -32,7 +37,7 @@ $text-color: white;
 
   color: #0000;
   margin: 0 10px;
-  
+
   border-radius: 100%;
   background: $image-color;
 }

@@ -5,8 +5,16 @@ import { ItemTypes } from "utilities/items";
 
 import "./User.scss";
 
-export default function User(props) {
+export default React.memo(function User(props) {
   const { icon, name, id, description = "..." } = props;
+  const { isShift } = props;
+  const { setUserActive } = props;
+
+  const setActive = ({ shiftKey }) => {
+    if (!shiftKey) return;
+    setUserActive(id);
+  };
+
   const [{ isDragging }, drag] = useDrag({
     item: {
       type: ItemTypes.CARD,
@@ -18,8 +26,17 @@ export default function User(props) {
   });
 
   return (
-    <div className="user" ref={drag} style={{ opacity: isDragging ? 0.55 : 1 }}>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTR4xDiny0ZGQDUH9TcdMT_TAbvgiBePIa59w&usqp=CAU" alt="user-icon" className="user-icon" />
+    <div
+      className={isShift ? "user active-user" : "user"}
+      ref={drag}
+      style={{ opacity: isDragging ? 0.55 : 1 }}
+      onClick={setActive}
+    >
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTR4xDiny0ZGQDUH9TcdMT_TAbvgiBePIa59w&usqp=CAU"
+        alt="user-icon"
+        className="user-icon"
+      />
       {/* <img src={icon} alt="user-icon" className="user-icon" /> */}
       <div className="user-description">
         <span>{name}</span>
@@ -28,4 +45,4 @@ export default function User(props) {
       </div>
     </div>
   );
-}
+});

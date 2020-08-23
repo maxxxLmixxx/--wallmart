@@ -1,6 +1,6 @@
 @import "../../utilities/config";
 
-$grid-gap: .5vw;
+$grid-gap: 0.5vw;
 $min: $min-block-width;
 
 .main-container {
@@ -16,4 +16,22 @@ $min: $min-block-width;
     minmax($min, 1fr);
 
   grid-template-rows: auto;
+}
+
+@media only screen and (max-width: 820px) {
+  .main-container {
+    grid-template-columns:
+      minmax(3/2 * $min, 2fr)
+      0
+      minmax($min, 1fr);
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .main-container {
+    grid-template-columns:
+      minmax(3/2 * $min, 2fr)
+      0
+      0;
+  }
 }

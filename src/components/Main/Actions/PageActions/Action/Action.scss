@@ -19,11 +19,6 @@
   border: 0px solid black;
   transition: border .020s ease-in;
 
-  transition-property: width;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  transition-delay: 2s;
-
   &:active {
     transition: border .020s ease-in;
     border: 5px solid black;
