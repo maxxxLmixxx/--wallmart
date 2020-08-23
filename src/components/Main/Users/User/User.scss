@@ -18,14 +18,17 @@ $text-color: white;
 
   overflow: hidden;
 
+  transition: .5s ease-in;
+
   box-sizing: border-box;
   background: $main-color;
   
   cursor: grab;
 }
 
-.active-user {
-  border: 1px solid white;
+.active-user:hover {
+  transition: .5s ease-in;
+  background: rgba(0, 0, 255, 0.315);
 }
 
 .user img {
