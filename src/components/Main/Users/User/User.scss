@@ -5,6 +5,8 @@ $main-color: #3a3a3d;
 $image-color: #23252b;
 $text-color: white;
 
+$animation-time: .3s;
+
 .user {
   height: $card-height;
 
@@ -18,7 +20,7 @@ $text-color: white;
 
   overflow: hidden;
 
-  transition: .5s ease-in;
+  transition: $animation-time ease-in;
 
   box-sizing: border-box;
   background: $main-color;
@@ -27,7 +29,7 @@ $text-color: white;
 }
 
 .active-user:hover {
-  transition: .5s ease-in;
+  transition: $animation-time ease-in;
   background: rgba(0, 0, 255, 0.315);
 }
 

@@ -1,10 +1,33 @@
 .action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
   border-radius: 20%;
   background: hsl(220, 7%, 43%); //#777b83
 
+  span {
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 1rem;
+  }
+
   &:hover {
-    opacity: .8;
+    // opacity: .8;
     cursor: pointer;
+
+    img {
+      animation: rotate 2.1s ease infinite;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
 
@@ -13,14 +36,16 @@
   height: 100%;
   opacity: 70%;
   border-radius: inherit;
-  
+
   box-sizing: border-box;
 
   border: 0px solid black;
-  transition: border .020s ease-in;
+  transition: border 0.02s ease-in;
+  border-radius: 40%;
 
   &:active {
-    transition: border .020s ease-in;
+    transition: border 0.02s ease-in;
     border: 5px solid black;
+    border-radius: 40%;
   }
 }

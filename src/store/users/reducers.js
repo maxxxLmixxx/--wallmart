@@ -112,7 +112,7 @@ export const usersReducer = (state = defaultState, action) => {
     }
     case CLEAR_ACTIVE_USERS: {
       const { inactiveUsersIds, activeUsersIds } = state;
-      inactiveUsersIds = inactiveUsersIds.push(...activeUsersIds);
+      inactiveUsersIds.push(...activeUsersIds);
       return { ...state, inactiveUsersIds, activeUsersIds: [] };
     }
     default:

@@ -1,12 +1,14 @@
-import React from 'react'
-import './Action.scss'
+import React from "react";
+import "./Action.scss";
 
-export default function Action({
-  // image = ``,
-}) {
+export default function Action({ image, text, ...rest }) {
   return (
-    <div className="action">
-      {/* <img src={image}></img> */}
+    <div className="action" {...rest}>
+      {!!image ? (
+        <img draggable="false" src={image}></img>
+      ) : (
+        <span>{text}</span>
+      )}
     </div>
-  )
+  );
 }
