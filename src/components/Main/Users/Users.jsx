@@ -38,6 +38,8 @@ export default function Users(props) {
   }, [handleShiftUp, handleShiftDown])
   //==============================================================
 
+  // const useKey();
+
   return (
     <div
       className={`users-container ${isOver && activeUsersIds.includes(item?.id) ? 'droppable--inactive' : ''}`}
@@ -51,7 +53,7 @@ export default function Users(props) {
         {Object.values(users)
           .filter(({ name }) => name.startsWith(filterValue))
           .map(({ name, id, icon }) => (
-            <User name={name} key={id} id={id} icon={icon} isShift={isShift} />
+            <User name={name} key={id} id={id} icon={icon} isShift={isShift} isActive={false} />
           ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useDrop } from "react-dnd";
 import { ItemTypes } from "utilities/items";
 
 import "./ActiveUsers.scss";
-import User from "../Users/User/User";
+import User from "../Users/User/UserRedux";
 
 export default function ActiveUsers(props) {
   const { users, inactiveUsersIds, setUserActive } = props;
@@ -24,7 +24,7 @@ export default function ActiveUsers(props) {
       ref={drop}
     >
       {Object.values(users).map(({ name, id, icon }) => (
-        <User name={name} key={id} id={id} icon={icon} />
+        <User name={name} key={id} id={id} icon={icon} isActive={true} />
       ))}
     </div>
   );

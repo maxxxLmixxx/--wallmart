@@ -1,23 +1,33 @@
-import React from 'react'
+import React from "react";
 
-import { connect } from 'react-redux'
-import { setUserActive } from 'store/users/actions'
+import { connect } from "react-redux";
+import { setUserActive, setUserInactive } from "store/users/actions";
 
-import ActiveUsers from './ActiveUsers'
+import ActiveUsers from "./ActiveUsers";
 
 function ActiveUsersContainer(props) {
-  const { users, inactiveUsersIds, setUserActive } = props
-  return <ActiveUsers users={users} inactiveUsersIds={inactiveUsersIds} setUserActive={setUserActive} />
+  const { users, inactiveUsersIds, setUserActive, ...rest } = props;
+  return (
+    <ActiveUsers
+      users={users}
+      inactiveUsersIds={inactiveUsersIds}
+      setUserActive={setUserActive}
+      {...rest}
+    />
+  );
 }
 
 const mapStateToProps = (state) => {
-  const { allUsers, inactiveUsersIds, activeUsersIds } = state.users
+  const { allUsers, inactiveUsersIds, activeUsersIds } = state.users;
   return {
     users: activeUsersIds.map((id) => allUsers[id]),
-    inactiveUsersIds
-  }
-}
+    inactiveUsersIds,
+  };
+};
 
-const mapDispatchToProps = {setUserActive}
+const mapDispatchToProps = { setUserActive };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ActiveUsersContainer)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ActiveUsersContainer);

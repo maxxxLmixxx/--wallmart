@@ -8,11 +8,12 @@ import "./User.scss";
 export default React.memo(function User(props) {
   const { icon, name, id, description = "..." } = props;
   const { isShift } = props;
-  const { setUserActive } = props;
+  const { setUserActive, setUserInactive, isActive } = props;
 
   const setActive = ({ shiftKey }) => {
     if (!shiftKey) return;
-    setUserActive(id);
+    if (!isActive) setUserActive(id);
+    else setUserInactive(id);
   };
 
   const [{ isDragging }, drag] = useDrag({
