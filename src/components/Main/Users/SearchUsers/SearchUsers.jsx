@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SearchUsers.scss";
 
 export default function Users(props) {

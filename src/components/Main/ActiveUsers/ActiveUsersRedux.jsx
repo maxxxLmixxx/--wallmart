@@ -1,7 +1,7 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import { setUserActive, setUserInactive } from "store/users/actions";
+import { setUserActive } from "store/users/actions";
 
 import ActiveUsers from "./ActiveUsers";
 

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import useKey from "utilities/customHooks/useKey";
 
 import { useDrop } from "react-dnd";
 import { ItemTypes } from "utilities/items";
@@ -16,6 +17,11 @@ export default function ActiveUsers(props) {
       item: monitor.getItem(),
     }),
   });
+
+  const [isShift, setShift] = useState(false);
+  useKey("ShiftLeft", () => setShift(true), "keydown");
+  useKey("ShiftLeft", () => setShift(false), "keyup");
+
   return (
     <div
       className={`activeUsers-container  ${
@@ -24,7 +30,14 @@ export default function ActiveUsers(props) {
       ref={drop}
     >
       {Object.values(users).map(({ name, id, icon }) => (
-        <User name={name} key={id} id={id} icon={icon} isActive={true} />
+        <User
+          name={name}
+          key={id}
+          id={id}
+          icon={icon}
+          isShift={isShift}
+          isActive={true}
+        />
       ))}
     </div>
   );

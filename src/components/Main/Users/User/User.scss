@@ -30,7 +30,8 @@ $animation-time: .3s;
 
 .active-user:hover {
   transition: $animation-time ease-in;
-  background: rgba(0, 0, 255, 0.315);
+  background: #111160;
+  // background: rgba(0, 0, 255, 0.315);
 }
 
 .user img {
