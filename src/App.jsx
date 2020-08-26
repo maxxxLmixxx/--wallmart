@@ -14,7 +14,16 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import rootReducer from "store/reducers";
 
-const store = createStore(rootReducer);
+import { loadState, saveState } from "utilities/localStorage.js";
+const persistedState = loadState();
+
+const store = createStore(rootReducer, persistedState);
+store.subscribe(() => {
+  sessionStorage["redux-store"] = JSON.stringify(store.getState());
+});
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
 const Wrapper = (props) => {
   const { children } = props;
