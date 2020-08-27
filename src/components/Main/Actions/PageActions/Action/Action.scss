@@ -8,11 +8,10 @@
   border-radius: 20%;
   background: hsl(220, 7%, 43%); //#777b83
 
-  span {
-    color: white;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-size: 1rem;
+  position: relative;
+
+  &:active {
+    background: rgba(255, 255, 255, 0.705);
   }
 
   &:hover {
@@ -55,22 +54,45 @@
   }
 }
 
-.action img {
+.page-action--alien {
+  animation: dissapear 1s linear;
+  @keyframes dissapear { 0% {opacity: 0} 100% { opacity: 1 } }
+  
+  &:hover {
+    animation: shaking 2s ease infinite forwards;
+  }
+
+  &:hover #tree {
+    animation: moveUp 1.1s ease-in infinite forwards;
+
+    @keyframes moveUp {
+      from {
+        transform: translateY(50%);
+      }
+      to {
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @keyframes shaking {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.action svg {
   width: 100%;
   height: 100%;
-  // opacity: 70%;
   opacity: 1;
   border-radius: inherit;
 
   box-sizing: border-box;
-
-  border: 0px solid black;
-  transition: border 0.02s ease-in;
-  border-radius: 40%;
-
-  &:active {
-    transition: border 0.02s ease-in;
-    border: 0.2rem solid black;
-    border-radius: 40%;
-  }
 }

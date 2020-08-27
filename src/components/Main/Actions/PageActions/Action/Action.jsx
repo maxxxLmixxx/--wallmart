@@ -1,20 +1,17 @@
 import React from "react";
 import "./Action.scss";
 
-export default function Action({ image, text, animationClass, onClick }) {
+export default function Action({ BImage, animationClass, onClick }) {
   return (
     <div className="action">
-      {!!image ? (
-        <img
+      {BImage && (
+        <BImage
           draggable="false"
-          src={image}
-          alt={text ? text : "some-action"}
           className={animationClass}
           onClick={onClick}
-        ></img>
-      ) : (
-        <span>{text}</span>
+        />
       )}
+      <span />
     </div>
   );
 }
