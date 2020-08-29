@@ -9,10 +9,12 @@
   position: relative;
 
   border-radius: 1%;
-  background: hsl(220, 7%, 43%);
+
+  background: #3a3a3d;
+  // background: hsl(220, 7%, 43%);
 
   color: white;
-  font-size: 2rem;
+  font-size: 4vh;
 
   font-family: 'Russo One', sans-serif;
   // font-family: 'Amatic SC', cursive;
@@ -34,8 +36,7 @@
     cursor: pointer;
   }
 
-  &::before,
-  &::after {
+  &::before {
     content: '';
     position: absolute;
 
@@ -49,8 +50,7 @@
 }
 
 .page-action-click-animation {
-  &::before,
-  &::after {
+  &::before {
     width: 100%;
     height: 100%;
     opacity: 1;

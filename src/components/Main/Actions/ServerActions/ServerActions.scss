@@ -2,7 +2,10 @@
   display: grid;
   height: 100%;
   overflow: auto;
-  grid-template-rows: repeat(auto-fit, minmax(100px, 10%));
+  grid-template-rows: repeat(auto-fit, minmax(1fr));
   grid-gap: 1vh;
-  background: #444953;
+
+  background: #18181b;
+  // background: #18181b;
+  // background: #444953;
 }
