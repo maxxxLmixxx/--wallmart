@@ -20,7 +20,7 @@ import {
 } from "utilities/localStorage.js";
 const persistedState = loadStateFromSessionStorage();
 
-const store = createStore(rootReducer, persistedState);
+const store = createStore(rootReducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 store.subscribe(() => {
   sessionStorage["redux-store"] = JSON.stringify(store.getState());
 });

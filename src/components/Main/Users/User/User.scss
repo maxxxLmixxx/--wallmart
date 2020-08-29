@@ -24,7 +24,7 @@ $animation-time: .3s;
 
   box-sizing: border-box;
   background: $main-color;
-  
+
   cursor: grab;
 }
 
@@ -46,4 +46,12 @@ $animation-time: .3s;
 
   border-radius: 100%;
   background: $image-color;
+}
+
+.banned-status {
+  border-top: 5% solid red;
+}
+
+.unbanned-status {
+  border-top: 5% solid green;
 }

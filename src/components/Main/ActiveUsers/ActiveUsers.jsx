@@ -29,11 +29,12 @@ export default function ActiveUsers(props) {
       }`}
       ref={drop}
     >
-      {Object.values(users).map(({ name, id, icon }) => (
+      {Object.values(users).map(({ name, id, icon, banned }) => (
         <User
           name={name}
           key={id}
           id={id}
+          isBanned={banned}
           icon={icon}
           isShift={isShift}
           isActive={true}

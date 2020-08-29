@@ -38,11 +38,12 @@ export default function Users(props) {
       <div className="users--main">
         {Object.values(users)
           .filter(({ name }) => name.startsWith(filterValue))
-          .map(({ name, id, icon }) => (
+          .map(({ name, id, icon, banned }) => (
             <User
               name={name}
               key={id}
               id={id}
+              isBanned={banned}
               icon={icon}
               isShift={isShift}
               isActive={false}

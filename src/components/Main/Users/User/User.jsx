@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 
-import { useDrag } from "react-dnd";
-import { ItemTypes } from "utilities/items";
+import { useDrag } from 'react-dnd'
+import { ItemTypes } from 'utilities/items'
 
-import "./User.scss";
+import './User.scss'
 
 export default React.memo(function User(props) {
-  const { icon, name, id, description = "..." } = props;
-  const { isShift } = props;
-  const { setUserActive, setUserInactive, isActive } = props;
+  const { icon, name, id, description = '...' } = props
+  const { isShift } = props
+  const { setUserActive, setUserInactive, isActive, isBanned } = props
 
   const setActive = ({ shiftKey }) => {
-    if (!shiftKey) return;
-    if (!isActive) setUserActive(id);
-    else setUserInactive(id);
-  };
+    if (!shiftKey) return
+    if (!isActive) setUserActive(id)
+    else setUserInactive(id)
+  }
 
   const [{ isDragging }, drag] = useDrag({
     item: {
@@ -24,11 +24,11 @@ export default React.memo(function User(props) {
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
-  });
+  })
 
   return (
     <div
-      className={isShift ? "user active-user" : "user"}
+      className={`${isShift ? 'user active-user' : 'user'} ${isBanned ? 'banned-status' : 'unbanned-status'}`}
       ref={drag}
       style={{ opacity: isDragging ? 0.55 : 1 }}
       onClick={setActive}
@@ -45,5 +45,5 @@ export default React.memo(function User(props) {
         <span>{description}</span>
       </div>
     </div>
-  );
-});
+  )
+})

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Actions.scss";
 
-import ServerActions from "./ServerActions/ServerActions";
+import ServerActions from "./ServerActions/ServerActionsRedux";
 import PageActions from "./PageActions/PageActionsRedux";
 
 export default function Actions() {

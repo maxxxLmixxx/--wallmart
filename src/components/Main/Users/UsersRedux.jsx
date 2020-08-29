@@ -6,8 +6,8 @@ import { setUserInactive } from 'store/users/actions'
 import Users from './Users'
 
 function UsersRedux(props) {
-  const { users, activeUsersIds, filterValue, setUserInactive } = props
-  return <Users users={users} activeUsersIds={activeUsersIds} filterValue={filterValue} setUserInactive={setUserInactive} />
+  const { users, activeUsersIds, filterValue, setUserInactive, ...rest } = props
+  return <Users users={users} activeUsersIds={activeUsersIds} filterValue={filterValue} setUserInactive={setUserInactive} {...rest} />
 }
 
 const mapStateToProps = (state) => {
