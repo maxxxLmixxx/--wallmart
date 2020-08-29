@@ -3,6 +3,6 @@
 .actions-container {
   display: grid;
   height: $section-height;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   row-gap: 0.5vw;
 }

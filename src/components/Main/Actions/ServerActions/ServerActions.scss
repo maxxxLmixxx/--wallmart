@@ -1,5 +1,8 @@
 .server-actions-container {
   display: grid;
-  grid-gap: 1vw;
+  height: 100%;
+  overflow: auto;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 10%));
+  grid-gap: 1vh;
   background: #444953;
 }

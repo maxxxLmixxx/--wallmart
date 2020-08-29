@@ -1,25 +1,30 @@
-.page-action {
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+.server-action {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 10px;
-
-  border-radius: 20%;
-  background: hsl(220, 7%, 43%); //#777b83
-
   position: relative;
 
-  svg {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    border-radius: inherit;
+  border-radius: 1%;
+  background: hsl(220, 7%, 43%);
 
-    box-sizing: border-box;
-  }
+  color: white;
+  font-size: 2rem;
+
+  font-family: 'Russo One', sans-serif;
+  // font-family: 'Amatic SC', cursive;
+
+  overflow: hidden;
 
   transition: 0.3s linear;
+
+  span {
+    z-index: 2;
+  }
+
   &:active {
     transition: 0.3s linear;
     background: rgba(255, 255, 255, 0.705);
@@ -27,5 +32,35 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+
+    width: 0%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.705);
+
+    transition: all 0.75s ease-in;
+  }
+}
+
+.page-action-click-animation {
+  &::before,
+  &::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 0.5s linear backwards;
+
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+    background: rgba(7, 202, 192, 0.705);
+    transition: all 0.2s linear;
   }
 }
