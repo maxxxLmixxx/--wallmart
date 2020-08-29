@@ -3,7 +3,7 @@ import "./Action.scss";
 
 export default function Action({ BImage, animationClass, onClick }) {
   return (
-    <div className="action">
+    <div className="page-action">
       {BImage && (
         <BImage
           draggable="false"

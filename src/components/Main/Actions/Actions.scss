@@ -1,9 +1,8 @@
 @import "../../../utilities/config";
 
 .actions-container {
-  height: $section-height;
   display: grid;
-  align-items: flex-end;
-  grid-template-rows: auto auto;
-  gap: 0.5vw;
+  height: $section-height;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 0.5vw;
 }

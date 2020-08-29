@@ -1,4 +1,4 @@
-.action {
+.page-action {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,17 +10,27 @@
 
   position: relative;
 
+  svg {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: inherit;
+
+    box-sizing: border-box;
+  }
+
+  transition: 0.3s linear;
   &:active {
+    transition: 0.3s linear;
     background: rgba(255, 255, 255, 0.705);
   }
 
   &:hover {
-    // opacity: .8;
     cursor: pointer;
   }
 }
 
-.page-action--rotate {
+svg.page-action--rotate {
   &:hover {
     animation: rotate 2.1s ease infinite;
   }
@@ -32,7 +42,7 @@
   }
 }
 
-.page-action--shaking {
+svg.page-action--shaking {
   &:hover {
     animation: shaking 0.25s ease infinite;
   }
@@ -54,10 +64,17 @@
   }
 }
 
-.page-action--alien {
+svg.page-action--alien {
   animation: dissapear 1s linear;
-  @keyframes dissapear { 0% {opacity: 0} 100% { opacity: 1 } }
-  
+  @keyframes dissapear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   &:hover {
     animation: shaking 2s ease infinite forwards;
   }
@@ -88,11 +105,36 @@
   }
 }
 
-.action svg {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  border-radius: inherit;
+svg.page-action--diskette {
+  width: 90%;
+  height: 90%;
 
-  box-sizing: border-box;
+  $timing: 0.25s;
+  transition: $timing linear;
+  #gate {
+    transition: $timing linear;
+  }
+
+  &:hover {
+    transition: $timing linear;
+    transform: translateX(3px);
+  }
+
+  &:hover #gate {
+    transition: $timing linear;
+    transform: translateX(20px);
+  }
+
+  #left--save {
+    transition: 1s ease;
+    &:hover {
+      fill: white;
+    }
+  }
+  #right--load {
+    transition: 1s ease;
+    &:hover {
+      fill: black;
+    }
+  }
 }
