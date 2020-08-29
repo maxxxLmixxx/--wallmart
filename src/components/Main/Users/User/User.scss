@@ -5,7 +5,7 @@ $main-color: #3a3a3d;
 $image-color: #23252b;
 $text-color: white;
 
-$animation-time: .3s;
+$animation-time: 0.3s;
 
 .user {
   height: $card-height;
@@ -49,9 +49,9 @@ $animation-time: .3s;
 }
 
 .banned-status {
-  border-top: 5% solid red;
+  border-top: 5px solid red;
 }
 
 .unbanned-status {
-  border-top: 5% solid green;
+  border-top: 5px solid green;
 }
