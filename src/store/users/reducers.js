@@ -6,6 +6,7 @@ import {
   CLEAR_ACTIVE_USERS,
   SORT_INACTIVE_USERS_AZ,
   BAN_ACTIVE_USERS,
+  FILTER_BY_ROOM
 } from './actions'
 
 const defaultState = {
@@ -81,6 +82,12 @@ const defaultState = {
     '42',
     '43',
   ],
+  rooms: {
+    'room1': [11, 12, 13, 14, 15, 16, 17, 18],
+    'room2': [27, 28, 29, 30, 31, 32, 33, 34, 35],
+    'room3': [11, 15],
+    'all': [11, 12],
+  }
 }
 
 export const usersReducer = (state = defaultState, action) => {
@@ -137,6 +144,12 @@ export const usersReducer = (state = defaultState, action) => {
         allUsers[id].banned = true
       })
       return { ...state, allUsers }
+    }
+    case FILTER_BY_ROOM: {
+      let { inactiveUsersIds, rooms } = state;
+      inactiveUsersIds = rooms[action.payload]
+      
+      return { ...state, inactiveUsersIds, rooms }
     }
     default:
       return { ...state }

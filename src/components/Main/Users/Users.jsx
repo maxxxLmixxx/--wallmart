@@ -6,7 +6,7 @@ import { ItemTypes } from "utilities/items";
 
 import "./Users.scss";
 import SearchUsers from "./SearchUsers/SearchUsersRedux";
-import RoomSwitcher from "./RoomSwitcher/RoomSwitcher";
+import RoomSwitcher from "./RoomSwitcher/RoomSwitcherRedux";
 import User from "./User/UserRedux";
 
 export default function Users(props) {
