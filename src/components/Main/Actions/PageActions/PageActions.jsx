@@ -20,7 +20,7 @@ export default function PageActions(props) {
         clearActiveUsers={clearActiveUsers}
         onClick={clearActiveUsers}
       />
-      <Action BImage={SVG_alien} animationClass="page-action--alien" />
+      <Action BImage={SVG_alien} animationClass="page-action--alien" pauseOnLoad={true} />
       <Action BImage={SVG_diskette} animationClass="page-action--diskette" />
       <Action
         BImage={SVG_sortAZ}
