@@ -35,7 +35,13 @@ export default function Users(props) {
         <SearchUsers placeholder="Find user..." />
         <RoomSwitcher />
       </div>
-      <div className="users--main">
+      <div
+        className={`users--main ${
+          Object.keys(users).length === 1 ? "one-card-container" : ""
+        } `}
+      >
+        {/* Object.keys(users).length === 1 ? <User className="placeholder-user" /> : '' */}
+
         {Object.values(users)
           .filter(({ name }) => name.startsWith(filterValue))
           .map(({ name, id, icon, banned }) => (

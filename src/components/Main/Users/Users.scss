@@ -1,4 +1,4 @@
-@import '../../../utilities/config';
+@import "../../../utilities/config";
 
 $container-color: #18181b;
 $container-active-color: $container-color;
@@ -32,9 +32,29 @@ $container-color--transparent: #18181bc5;
   @include --web-color-scrollbar(#717174, $container-color--transparent);
 }
 
+.one-card-container {
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  
+  .user {
+    transition: .2s linear;
+    width: 50%;
+    margin: 2% auto 0;
+    transform: scale(1.05);
+  }
+}
+
 .droppable--inactive {
   background: $container-active-color;
 
   $lines-color: rgb(110, 0, 0);
-  background: repeating-linear-gradient(45deg, $lines-color, $lines-color 17px, #18181b 17px, #18181b 50px);
+  background: repeating-linear-gradient(
+    45deg,
+    $lines-color,
+    $lines-color 17px,
+    #18181b 17px,
+    #18181b 50px
+  );
 }

@@ -152,7 +152,7 @@ export const usersReducer = (state = defaultState, action) => {
       const userId = String(action.payload.userId);
 
       const index = activeUsersIds.indexOf(userId);
-      if (index < 0) throw new Error("no user");
+      if (index < 0) return { ...state };
 
       activeUsersIds.splice(index, 1);
 
@@ -208,7 +208,7 @@ export const usersReducer = (state = defaultState, action) => {
       let { inactiveUsersIds, rooms } = state;
       const roomName = action.payload;
 
-      if (!Object.keys(rooms).includes(roomName)) throw new Error('no such room')
+      if (!Object.keys(rooms).includes(roomName)) return { ...state };
 
       inactiveUsersIds = rooms[roomName];
 

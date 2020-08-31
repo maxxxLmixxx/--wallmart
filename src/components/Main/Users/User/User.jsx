@@ -9,7 +9,7 @@ export default React.memo(function User(props) {
   const { icon, name, id, description = '...' } = props
   const { isShift } = props
   const { setUserActive, setUserInactive, isActive, isBanned } = props
-
+  
   const setActive = ({ shiftKey }) => {
     if (!shiftKey) return
     if (!isActive) setUserActive(id)
@@ -28,7 +28,7 @@ export default React.memo(function User(props) {
 
   return (
     <div
-      className={`${isShift ? 'user active-user' : 'user'} ${isBanned ? 'banned-status' : 'unbanned-status'}`}
+      className={`user ${isShift ? 'active-user' : ''} ${isBanned ? 'banned-status' : 'unbanned-status'}`}
       ref={drag}
       style={{ opacity: isDragging ? 0.55 : 1 }}
       onClick={setActive}
