@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 .server-action {
@@ -16,13 +16,11 @@
   color: white;
   font-size: 4vh;
 
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   // font-family: 'Amatic SC', cursive;
 
   overflow: hidden;
-
-  //! transition: 0.3s linear; // 
-
+  
   span {
     z-index: 2;
   }
@@ -32,12 +30,16 @@
     background: rgba(255, 255, 255, 0.705);
   }
 
+  $color-timing: .5s;
+  transition: color $color-timing ease;
   &:hover {
+    transition: color $color-timing ease;
     cursor: pointer;
+    color: gold;
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
 
     width: 0%;
