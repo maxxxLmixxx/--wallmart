@@ -15,7 +15,8 @@ $container-color--transparent: #44495360;
 }
 
 .droppable--active {
-  background: $active-container-color;
+  opacity: .7;
+  // background: $active-container-color;
 
   // $lines-color: rgb(0, 120, 0);
   // background: repeating-linear-gradient(45deg, #606dbc, #606dbc 15px, #465298 15px, #465298 50px);

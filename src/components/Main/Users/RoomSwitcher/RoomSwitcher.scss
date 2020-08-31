@@ -16,7 +16,7 @@
 .room-switch {
   width: 35px;
   height: 35px;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: #3f3f3f;
 
   color: white;
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1em;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 
   transition: 0.5s linear;
 
@@ -35,8 +35,12 @@
     transition: 0.3s linear;
   }
   &:active {
-    transition: 0.05s linear;
-
-    background: rgba(22, 177, 204, 0.452);
+    transition: 0.5s linear;
+    // background: rgba(22, 177, 204, 0.452);
   }
+}
+
+.active-room {
+  box-sizing: border-box;
+  background: rgba(0, 212, 255, .5);
 }

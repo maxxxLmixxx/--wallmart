@@ -1,22 +1,33 @@
-import React from 'react'
+import React from "react";
 
-import { connect } from 'react-redux'
-import { filterByRoom } from 'store/users/actions'
+import { connect } from "react-redux";
+import { filterByRoom, changeActiveRoom } from "store/users/actions";
 
-import RoomSwitcher from './RoomSwitcher'
+import RoomSwitcher from "./RoomSwitcher";
 
 function RoomSwitcherContainer(props) {
-  const { rooms, ...rest } = props
-  return <RoomSwitcher rooms={rooms} {...rest} />
+  const { rooms, activeRoom, changeActiveRoom, ...rest } = props;
+  return (
+    <RoomSwitcher
+      rooms={rooms}
+      activeRoom={activeRoom}
+      changeActiveRoom={changeActiveRoom}
+      {...rest}
+    />
+  );
 }
 
 const mapStateToProps = (state) => {
-  const { rooms } = state.users
+  const { rooms, activeRoom } = state.users;
   return {
     rooms,
-  }
-}
+    activeRoom,
+  };
+};
 
-const mapDispatchToProps = { filterByRoom }
+const mapDispatchToProps = { filterByRoom, changeActiveRoom };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RoomSwitcherContainer)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RoomSwitcherContainer);

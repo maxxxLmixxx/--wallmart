@@ -2,6 +2,7 @@
   display: grid;
   height: 100%;
   overflow: auto;
+  min-height: 30vh;
   grid-template-rows: repeat(auto-fit, minmax(1fr));
   grid-gap: 1vh;
 

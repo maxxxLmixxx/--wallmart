@@ -40,9 +40,9 @@ export default React.memo(function User(props) {
       />
       {/* <img src={icon} alt="user-icon" className="user-icon" /> */}
       <div className="user-description">
-        <span>{name}</span>
-        <span>{id}</span>
-        <span>{description}</span>
+        {/* <span>{name} . . .</span> */}
+        <span>{id} . . .</span>
+        {/* <span>{description}</span> */}
       </div>
     </div>
   )
