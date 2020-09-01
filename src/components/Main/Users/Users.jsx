@@ -24,6 +24,10 @@ export default function Users(props) {
   useKey("ShiftLeft", () => setShift(true), "keydown");
   useKey("ShiftLeft", () => setShift(false), "keyup");
 
+  const filteredUsers = Object.values(users).filter(({ name }) =>
+    name.startsWith(filterValue)
+  );
+
   return (
     <div
       className={`users-container ${
@@ -37,24 +41,22 @@ export default function Users(props) {
       </div>
       <div
         className={`users--main ${
-          Object.keys(users).length === 1 ? "one-card-container" : ""
+          filteredUsers?.length === 1 ? "one-card-container" : ""
         } `}
       >
         {/* Object.keys(users).length === 1 ? <User className="placeholder-user" /> : '' */}
 
-        {Object.values(users)
-          .filter(({ name }) => name.startsWith(filterValue))
-          .map(({ name, id, icon, banned }) => (
-            <User
-              name={name}
-              key={id}
-              id={id}
-              isBanned={banned}
-              icon={icon}
-              isShift={isShift}
-              isActive={false}
-            />
-          ))}
+        {filteredUsers.map(({ name, id, icon, banned }) => (
+          <User
+            name={name}
+            key={id}
+            id={id}
+            isBanned={banned}
+            icon={icon}
+            isShift={isShift}
+            isActive={false}
+          />
+        ))}
       </div>
     </div>
   );
