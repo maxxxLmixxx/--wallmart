@@ -10,7 +10,9 @@ function UserRedux(props) {
   return <User setUserActive={setUserActive} setUserInactive={setUserInactive} {...rest} />;
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  
+});
 
 const mapDispatchToProps = { setUserActive, setUserInactive };
 

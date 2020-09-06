@@ -46,13 +46,14 @@ export default function Users(props) {
       >
         {/* Object.keys(users).length === 1 ? <User className="placeholder-user" /> : '' */}
 
-        {filteredUsers.map(({ name, id, icon, banned }) => (
+        {filteredUsers.map(({ name, nickname, id, icon, banned }) => (
           <User
             name={name}
             key={id}
             id={id}
             isBanned={banned}
-            icon={icon}
+            iconSRC={icon}
+            nickname={nickname}
             isShift={isShift}
             isActive={false}
           />

@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: center;
 
+  height: auto;
+
   padding: 10px;
 
   border-radius: 20%;
@@ -112,9 +114,8 @@ svg.page-action--alien {
 }
 
 svg.page-action--diskette {
-  // width: 90%;
-  // height: 90%;
   transform: scale(0.9);
+  border-radius: 10% !important;
 
   $timing: 0.25s;
   transition: $timing linear;

@@ -8,123 +8,421 @@ import {
   BAN_ACTIVE_USERS,
   FILTER_BY_ROOM,
   CHANGE_ACTIVE_ROOM,
+  FETCH_USERS,
 } from "./actions";
 
 const defaultState = {
   allUsers: {
-    11: { name: "Mike1", id: "11", icon: "", banned: false, muted: false },
-    12: { name: "Mike2", id: "12", icon: "", banned: false, muted: false },
-    13: { name: "Mike3", id: "13", icon: "", banned: false, muted: false },
-    14: { name: "Mike4", id: "14", icon: "", banned: false, muted: false },
-    15: { name: "Mike5", id: "15", icon: "", banned: false, muted: false },
-    16: { name: "Mike6", id: "16", icon: "", banned: false, muted: false },
-    17: { name: "Mike7", id: "17", icon: "", banned: false, muted: false },
-    18: { name: "Mike8", id: "18", icon: "", banned: false, muted: false },
-    19: { name: "Mike9", id: "19", icon: "", banned: false, muted: false },
-    20: { name: "Mike10", id: "20", icon: "", banned: false, muted: false },
-    21: { name: "Mike11", id: "21", icon: "", banned: false, muted: false },
-    22: { name: "Mike12", id: "22", icon: "", banned: false, muted: false },
-    23: { name: "Mike13", id: "23", icon: "", banned: false, muted: false },
-    24: { name: "Mike14", id: "24", icon: "", banned: false, muted: false },
-    25: { name: "Mike15", id: "25", icon: "", banned: false, muted: false },
-    26: { name: "Mike16", id: "26", icon: "", banned: false, muted: false },
-    27: { name: "Mike17", id: "27", icon: "", banned: false, muted: false },
-    28: { name: "Mike18", id: "28", icon: "", banned: false, muted: false },
-    29: { name: "Mike19", id: "29", icon: "", banned: false, muted: false },
-    30: { name: "Mike20", id: "30", icon: "", banned: false, muted: false },
-    31: { name: "Mike21", id: "31", icon: "", banned: false, muted: false },
-    32: { name: "Mike22", id: "32", icon: "", banned: false, muted: false },
-    33: { name: "Mike23", id: "33", icon: "", banned: false, muted: false },
-    34: { name: "Mike24", id: "34", icon: "", banned: false, muted: false },
-    35: { name: "Mike25", id: "35", icon: "", banned: false, muted: false },
-    36: { name: "Mike26", id: "36", icon: "", banned: false, muted: false },
-    37: { name: "Mike27", id: "37", icon: "", banned: false, muted: false },
-    38: { name: "Mike28", id: "38", icon: "", banned: false, muted: false },
-    39: { name: "Mike29", id: "39", icon: "", banned: false, muted: false },
-    40: { name: "Mike30", id: "40", icon: "", banned: false, muted: false },
-    41: { name: "Mike31", id: "41", icon: "", banned: false, muted: false },
-    42: { name: "Mike32", id: "42", icon: "", banned: false, muted: false },
-    43: { name: "Mike33", id: "43", icon: "", banned: false, muted: false },
+    159985870458322940: {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322940",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322941": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322941",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322942": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322942",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322943": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322943",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322944": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322944",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322945": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322945",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322946": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322946",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322947": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322947",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322948": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322948",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322949": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322949",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322950": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322950",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322951": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322951",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322952": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322952",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322953": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322953",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322954": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322954",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322955": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322955",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322956": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322956",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322957": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322957",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322958": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322958",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322959": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322959",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322960": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322960",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322961": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322961",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322962": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322962",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322963": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322963",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322964": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322964",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322965": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322965",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322966": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322966",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322967": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322967",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322968": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322968",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322969": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322969",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322970": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322970",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322971": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322971",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
+    "159985870458322972": {
+      name: "MEE6",
+      nickname: "None",
+      id: "159985870458322972",
+      icon:
+        "https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.webp?size=1024",
+      banned: false,
+      muted: false,
+    },
   },
   filterValue: "",
   activeUsersIds: [],
   inactiveUsersIds: [
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20",
-    "21",
-    "22",
-    "23",
-    "24",
-    "25",
-    "26",
-    "27",
-    "28",
-    "29",
-    "30",
-    "31",
-    "32",
-    "33",
-    "34",
-    "35",
-    "36",
-    "37",
-    "38",
-    "39",
-    "40",
-    "41",
-    "42",
-    "43",
+    "159985870458322940",
+    "159985870458322941",
+    "159985870458322942",
+    "159985870458322943",
+    "159985870458322944",
+    "159985870458322945",
+    "159985870458322946",
+    "159985870458322947",
+    "159985870458322948",
+    "159985870458322949",
+    "159985870458322950",
+    "159985870458322951",
+    "159985870458322952",
+    "159985870458322953",
+    "159985870458322954",
+    "159985870458322955",
+    "159985870458322956",
+    "159985870458322957",
+    "159985870458322958",
+    "159985870458322959",
+    "159985870458322960",
+    "159985870458322961",
+    "159985870458322962",
+    "159985870458322963",
+    "159985870458322964",
+    "159985870458322965",
+    "159985870458322966",
+    "159985870458322967",
+    "159985870458322968",
+    "159985870458322969",
+    "159985870458322970",
+    "159985870458322971",
+    "159985870458322972",
   ],
   rooms: {
-    room1: ["11", "12", "13", "14", "15", "16", "17", "18"],
-    room2: ["27", "28", "29", "30", "31", "32", "33", "34", "35"],
-    room3: ["11", "15"],
+    room1: [
+      "159985870458322940",
+      "159985870458322941",
+      "159985870458322942",
+      "159985870458322943",
+      "159985870458322944",
+      "159985870458322945",
+      "159985870458322946",
+      "159985870458322947",
+    ],
+    room2: [
+      "159985870458322957",
+      "159985870458322958",
+      "159985870458322959",
+      "159985870458322960",
+      "159985870458322961",
+      "159985870458322962",
+      "159985870458322963",
+      "159985870458322964",
+      "159985870458322965",
+      "159985870458322966",
+      "159985870458322967",
+      "159985870458322968",
+    ],
+    room3: ["159985870458322971", "159985870458322972"],
     all: [
-      "11",
-      "12",
-      "13",
-      "14",
-      "15",
-      "16",
-      "17",
-      "18",
-      "19",
-      "20",
-      "21",
-      "22",
-      "23",
-      "24",
-      "25",
-      "26",
-      "27",
-      "28",
-      "29",
-      "30",
-      "31",
-      "32",
-      "33",
-      "34",
-      "35",
-      "36",
-      "37",
-      "38",
-      "39",
-      "40",
-      "41",
-      "42",
-      "43",
+      "159985870458322940",
+      "159985870458322941",
+      "159985870458322942",
+      "159985870458322943",
+      "159985870458322944",
+      "159985870458322945",
+      "159985870458322946",
+      "159985870458322947",
+      "159985870458322948",
+      "159985870458322949",
+      "159985870458322950",
+      "159985870458322951",
+      "159985870458322952",
+      "159985870458322953",
+      "159985870458322954",
+      "159985870458322955",
+      "159985870458322956",
+      "159985870458322957",
+      "159985870458322958",
+      "159985870458322959",
+      "159985870458322960",
+      "159985870458322961",
+      "159985870458322962",
+      "159985870458322963",
+      "159985870458322964",
+      "159985870458322965",
+      "159985870458322966",
+      "159985870458322967",
+      "159985870458322968",
+      "159985870458322969",
+      "159985870458322970",
+      "159985870458322971",
+      "159985870458322972",
     ],
   },
   activeRoom: "all",
 };
+
+// const defaultState_ = {
+//   allUsers: {},
+//   filterValue: "",
+//   activeUsersIds: [],
+//   inactiveUsersIds: [],
+//   rooms: {
+//     all: []
+//   },
+//   activeRoom: "all",
+// }
 
 export const usersReducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -176,9 +474,10 @@ export const usersReducer = (state = defaultState, action) => {
     }
 
     case CLEAR_ACTIVE_USERS: {
-      const { inactiveUsersIds, activeUsersIds } = state;
-      inactiveUsersIds.push(...activeUsersIds);
-      return { ...state, inactiveUsersIds, activeUsersIds: [] };
+      let { allUsers, inactiveUsersIds, rooms, activeRoom } = state;
+      inactiveUsersIds = [...rooms[activeRoom]];
+      rooms["all"] = Object.keys(allUsers);
+      return { ...state, rooms, inactiveUsersIds, activeUsersIds: [] };
     }
 
     case SORT_INACTIVE_USERS_AZ: {
@@ -219,6 +518,14 @@ export const usersReducer = (state = defaultState, action) => {
       let { activeRoom } = state;
       activeRoom = action.payload;
       return { ...state, activeRoom };
+    }
+
+    case FETCH_USERS: {
+      let users = action.payload;
+
+      console.log(users);
+
+      return { ...state };
     }
 
     default:

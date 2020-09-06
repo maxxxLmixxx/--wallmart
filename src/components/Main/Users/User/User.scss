@@ -10,9 +10,11 @@ $animation-time: 0.3s;
 .user {
   height: $card-height;
 
+  max-width: 370px;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   color: $text-color;
   margin: 5px;
@@ -30,13 +32,13 @@ $animation-time: 0.3s;
 
 .active-user:hover {
   transition: $animation-time ease-in;
-  background: #111160;
+  background: #2121638c;
   // background: rgba(0, 0, 255, 0.315);
 }
 
 .user img {
-  width: $image-size;
-  height: $image-size;
+  max-width: $image-size;
+  max-height: $image-size;
 
   display: inline-block;
   overflow: hidden;
@@ -44,7 +46,7 @@ $animation-time: 0.3s;
   color: #0000;
   margin: 0 10px;
 
-  border-radius: 100%;
+  border-radius: 50%;
   background: $image-color;
 }
 

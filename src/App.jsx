@@ -11,16 +11,18 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "store/reducers";
 
+import ReduxThunk from 'redux-thunk';
+
 import {
-  loadStateFromSessionStorage,
+  // loadStateFromSessionStorage,
   saveStateToSessionStorage,
 } from "utilities/localStorage.js";
-const persistedState = loadStateFromSessionStorage();
+// const persistedState = loadStateFromSessionStorage();
 
-const store = createStore(rootReducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(rootReducer, compose(applyMiddleware(ReduxThunk)));
 store.subscribe(() => {
   sessionStorage["redux-store"] = JSON.stringify(store.getState());
 });

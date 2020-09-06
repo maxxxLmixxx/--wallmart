@@ -12,6 +12,8 @@ $container-color--transparent: #44495360;
 
   @include --moz-color-scrollbar(#717174, $container-color);
   @include --web-color-scrollbar(#717174, $container-color);
+
+  grid-row: 1 / 4;
 }
 
 .droppable--active {

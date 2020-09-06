@@ -9,6 +9,7 @@ import User from "../Users/User/UserRedux";
 
 export default function ActiveUsers(props) {
   const { users, inactiveUsersIds, setUserActive } = props;
+
   const [{ isOver, item }, drop] = useDrop({
     accept: ItemTypes.CARD,
     drop: (item, monitor) => setUserActive(item.id),
@@ -29,13 +30,14 @@ export default function ActiveUsers(props) {
       }`}
       ref={drop}
     >
-      {Object.values(users).map(({ name, id, icon, banned }) => (
+      {Object.values(users).map(({ name, nickname, id, icon, banned }) => (
         <User
           name={name}
           key={id}
           id={id}
           isBanned={banned}
-          icon={icon}
+          iconSRC={icon}
+          nickname={nickname}
           isShift={isShift}
           isActive={true}
         />

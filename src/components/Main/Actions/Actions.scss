@@ -5,4 +5,13 @@
   height: $section-height;
   grid-template-rows: 1fr auto;
   row-gap: 0.5vw;
+
+  grid-row: 1 / 4;
+}
+
+@media only screen and (max-height: 400px) {
+  .actions-container {
+    grid-template-rows: 1fr 1fr;
+
+  }
 }

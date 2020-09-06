@@ -9,9 +9,11 @@ $container-color--transparent: #18181bc5;
   overflow: hidden;
 
   display: flex;
+  grid-row: 1 / 4;
   flex-direction: column;
 
   background: $container-color;
+
 }
 
 .users--header {
@@ -57,4 +59,8 @@ $container-color--transparent: #18181bc5;
     #18181b 17px,
     #18181b 50px
   );
+}
+
+.clicked-event {
+  
 }

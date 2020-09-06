@@ -1,13 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import { connect } from 'react-redux'
-import { setUserInactive } from 'store/users/actions'
+import { setUserInactive, fetchUsersThunk } from 'store/users/actions'
 
 import Users from './Users'
 
 function UsersRedux(props) {
-  const { users, activeUsersIds, filterValue, setUserInactive, ...rest } = props
-  return <Users users={users} activeUsersIds={activeUsersIds} filterValue={filterValue} setUserInactive={setUserInactive} {...rest} />
+  const { users, activeUsersIds, filterValue, setUserInactive, fetchUsersThunk, ...rest } = props
+  
+  const [isLoad, setLoad] = useState(true);
+  if (isLoad) {
+    fetchUsersThunk();
+    setLoad(false);
+  }
+
+  return <Users users={users} 
+    activeUsersIds={activeUsersIds}
+    filterValue={filterValue}
+    setUserInactive={setUserInactive}
+    {...rest} 
+  />
 }
 
 const mapStateToProps = (state) => {
@@ -19,6 +31,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = { setUserInactive }
+const mapDispatchToProps = { setUserInactive, fetchUsersThunk }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersRedux)
