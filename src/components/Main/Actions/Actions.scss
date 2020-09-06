@@ -12,6 +12,17 @@
 @media only screen and (max-height: 400px) {
   .actions-container {
     grid-template-rows: 1fr 1fr;
+  }
+}
 
+@media only screen and (max-height: 1500px) {
+  .actions-container {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .actions-container {
+    grid-template-rows: auto;
   }
 }
